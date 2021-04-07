@@ -70,21 +70,23 @@ struct MasterView: View {
                                     .lineSpacing(0.5)
                                 
                             }
-                            
                         }
                     }
-                    
-                }
+                }.onMove(perform: move)
                 .onDelete {
                     entries.remove(at: $0)
                 }
                 
-
-                
-                
-                
-            }
+        
+        }
+        
+        
     }
+    func move(from source: IndexSet,to destination: Int) {
+        entries.model.move(fromOffsets: source, toOffset: destination)
+    }
+    
+}
         
             
             
@@ -93,6 +95,5 @@ struct MasterView: View {
             ContentView(entries:ViewModel())
         }
     }
-}
 
 
