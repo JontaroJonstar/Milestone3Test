@@ -14,6 +14,7 @@ struct ContentView: View {
     var body: some View{
         NavigationView {
             MasterView(entries: entries)
+                
                 .navigationBarTitle(Text("Favorite Foods"))
                 .navigationBarItems(leading:
                 EditButton(), trailing:
@@ -25,8 +26,12 @@ struct ContentView: View {
                     Image(systemName: "plus")
                 })
         }
+        
     }
+    
+    
 }
+
 
 struct MasterView: View {
     @ObservedObject var entries: ViewModel
@@ -68,6 +73,10 @@ struct MasterView: View {
                             
                         }
                     }
+                    
+                }
+                .onDelete {
+                    entries.remove(at: $0)
                 }
                 
 
