@@ -3,7 +3,7 @@ import SwiftUI
 
 
 
-class Entry: Identifiable {
+class Entry: Identifiable, ObservableObject {
     var title: String
     var description: String
     var story: String
@@ -11,6 +11,8 @@ class Entry: Identifiable {
     var image: String
     var recipe: String
     var ingredients: String
+    static let `default` = Entry(title: "test", description: "test", story: "test", image: "test", recipe: "test", ingredients: "test", idNumber: "test")
+    
     
     init(title: String, description: String, story: String, image: String, recipe: String, ingredients: String, idNumber: String){
         self.idNumber = idNumber
@@ -23,6 +25,8 @@ class Entry: Identifiable {
         
     }
 }
+
+
 
 
 

@@ -13,11 +13,16 @@ struct DetailView: View {
     
     //Property wrapper to allow for per screen size alterations
     @Environment(\.horizontalSizeClass) var sizeClass
+    @Environment(\.editMode) var editMode
+    @State private var draftEntry = Entry.default
+    //@Binding var entry: Entry
+    @ObservedObject var entry: Entry
+    
+    //let entry: Entry
     
     //@State var Title: String = "Steak"  //Title string
     //@State var Description: String = "Medium rare and served with Hot Chips" //Desicription String
     //@State var Story: String = "Juicy, tender, loaded with flavor, and has a minimum amount of fat. However, there is a special kind of fat that helps meat be juicy and full of flavor. The best food in the world!" //Story String
-    let entry : Entry
     
     var body: some View {
         NavigationView {
@@ -34,10 +39,27 @@ struct DetailView: View {
                             
                             .ignoresSafeArea()
                         // if statement covering regular size screen formating
+                    
+                                                
+                    .navigationBarItems(trailing:
+                                HStack {
+                                    NavigationLink(destination: EditTextView(entry:entry)) {
+                                        Text("Edit Entry")}
+                                })
+                                            
+                            
+                            
+                            
+                
                     if sizeClass == .regular {
+                        
+                       
+                          
+                  
                                                  
                         
-                        VStack{ //Vertical Ordering and elements
+                        VStack{  //Vertical Ordering and elements
+                            
                             //Food Image
                             Image("\(entry.image)")
                                 .resizable()
@@ -211,21 +233,10 @@ struct DetailView: View {
                         }
                         
                     }
-                //.onDelete(perform: delete)
+               
                         
                 }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    /*NavigationLink(destination: EditTextView(entry:entry)) {
-                        Text("Edit Entry")}*/
-                }
-                ToolbarItem(placement: .navigationBarTrailing) {
-                                EditButton()
-                }
-            
-            
-        }
-           
+
         
     }
         
@@ -236,10 +247,17 @@ struct DetailView: View {
     }**/
     
     
+//}
+//
+//
+//    
+//
+//
+//}
+/*
+struct DetailView_Previews: PreviewProvider {
+    static var previews: some View {
+        DetailView(entryTest: .constant(.default))
+    }
+}*/
 }
-
-        
-    
-
-
-
