@@ -8,40 +8,45 @@
 import Foundation
 import SwiftUI
 
-class EditViewModel: ObservableObject {
-    @State var title = ""
-    @State var description  = ""
-    @State var story = ""
-    @State var recipe = ""
-    @State var ingredients = ""
-    @State var imageURL = ""
     
-}
-
+    
+    
 
 
 struct EditTextView: View {
+    
+//    @ObservedObject var description: String  = ""
+//    @ObservedObject private var story: String = ""
+//    @ObservedObject private var recipe: String = ""
+//    @ObservedObject private var ingredients: String = ""
+//    @ObservedObject private var image: String = ""
     @ObservedObject var entry: Entry
+    //@State var entry: Entry
     
     
-    @StateObject var viewModel = EditViewModel()
+    
     
     var body: some View{
+        
             VStack{
                 Form {
                     Section{
-                        TextField("\(entry.title)", text: $viewModel.title)
-                        TextField("\(entry.description)", text: $viewModel.description)
-                        TextField("\(entry.story)", text: $viewModel.story)
-                        TextField("\(entry.recipe)", text: $viewModel.recipe)
-                        TextField("\(entry.ingredients)", text: $viewModel.ingredients)
-                        TextField("Image URL", text: $viewModel.imageURL)
+                        TextEditor(text: $entry.title)
+                            .frame(width: 300, height: 200)
+                                            .border(Color.black, width: 1)
+                        
+                        TextEditor(text: $entry.description)
+                        TextEditor(text: $entry.story)
+                        TextEditor(text: $entry.recipe)
+                        TextEditor(text: $entry.ingredients)
+                        TextEditor(text: $entry.image)
                     }
                 }
                 
                 Divider()
                 
                 Button(action: {
+                    
                     
                     
                 }, label: {
@@ -55,5 +60,14 @@ struct EditTextView: View {
             }
             .navigationTitle("Edit Entry")
         }
+    private func save(){
+        
+        entry.title = entry.title
+//        entry.description = description
+//        entry.story = story
+//        entry.recipe = recipe
+//        entry.ingredients = ingredients
+//        entry.image = image
     }
+}
 

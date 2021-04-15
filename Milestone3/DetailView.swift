@@ -226,7 +226,7 @@ struct DetailView: View {
                             .navigationBarTitleDisplayMode(.inline)
                                                         
                             .navigationBarItems(trailing:
-                                            NavigationLink(destination: EditTextView(entry:entry)) {
+                                                    NavigationLink(destination: EditTextView(entry: entry)) {
                                                 Text("Edit Entry")})
                         
                         }
