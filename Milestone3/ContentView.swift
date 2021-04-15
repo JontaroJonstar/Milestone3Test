@@ -11,35 +11,32 @@ import SwiftUI
 struct ContentView: View {
     // instating all Entries from ListView
     @ObservedObject  var entries: ViewModel
-    var body: some View{
+    var body: some View {
         NavigationView {
             MasterView(entries: entries)
-                
                 .navigationBarTitle(Text("Favorite Foods"))
                 .navigationBarItems(leading:
-                EditButton(), trailing:
-                Button(action: {
-                withAnimation {
-                    entries.addElement()
-                }
+                    EditButton(), trailing:
+                    Button(action: {
+                    withAnimation {
+                        entries.addElement()
+                    }
                 }) {
-                    Image(systemName: "plus")
+                        Image(systemName: "plus")
                 })
         }
-        
     }
-    
-    
 }
 
 
 struct MasterView: View {
+    @Environment(\.editMode) var editMode
     @ObservedObject var entries: ViewModel
     var body: some View {
             List {
-                
                 ForEach(entries.model, id: \.description) { entry in
-                    NavigationLink(destination: DetailView(entry: entry)){
+                    NavigationLink(
+                        destination: DetailView(entry: entry), label: {
                         HStack{
                             Image(entry.image)
                                 .resizable()
@@ -48,7 +45,7 @@ struct MasterView: View {
                                 .scaledToFit()
                             VStack(alignment: .leading){
                                 
-                                Text(entry.title)
+                                Text("\(editMode?.wrappedValue.isEditing ?? false ? "Edit " : "")\(entry.title)")
                                     .padding(.horizontal, 10)
                                     .padding(.vertical, 10)
                                     .frame(width: 215, alignment: .topLeading)
@@ -71,7 +68,7 @@ struct MasterView: View {
                                 
                             }
                         }
-                    }
+                    })
                 }.onMove(perform: move)
                 .onDelete {
                     entries.remove(at: $0)
