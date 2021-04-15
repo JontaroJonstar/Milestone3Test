@@ -27,7 +27,6 @@ struct EditTextView: View {
     @StateObject var viewModel = EditViewModel()
     
     var body: some View{
-        NavigationView {
             VStack{
                 Form {
                     Section{
@@ -57,4 +56,4 @@ struct EditTextView: View {
             .navigationTitle("Edit Entry")
         }
     }
-}
+

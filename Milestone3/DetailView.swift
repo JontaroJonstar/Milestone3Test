@@ -25,7 +25,7 @@ struct DetailView: View {
     //@State var Story: String = "Juicy, tender, loaded with flavor, and has a minimum amount of fat. However, there is a special kind of fat that helps meat be juicy and full of flavor. The best food in the world!" //Story String
     
     var body: some View {
-        NavigationView {
+
             ZStack {    //Background elements
                         Color.black
                 Image("\(entry.image)")
@@ -39,13 +39,7 @@ struct DetailView: View {
                             
                             .ignoresSafeArea()
                         // if statement covering regular size screen formating
-                    
-                                                
-                    .navigationBarItems(trailing:
-                                HStack {
-                                    NavigationLink(destination: EditTextView(entry:entry)) {
-                                        Text("Edit Entry")}
-                                })
+            
                                             
                             
                             
@@ -229,6 +223,11 @@ struct DetailView: View {
                                     .lineSpacing(0.5)
                                 
                             }
+                            .navigationBarTitleDisplayMode(.inline)
+                                                        
+                            .navigationBarItems(trailing:
+                                            NavigationLink(destination: EditTextView(entry:entry)) {
+                                                Text("Edit Entry")})
                         
                         }
                         
@@ -240,8 +239,6 @@ struct DetailView: View {
         
     }
         
-        
-    }
     /**func delete(at offsets: IndexSet) {
         Text.remove(atOffsets: offsets)
     }**/
@@ -260,4 +257,5 @@ struct DetailView_Previews: PreviewProvider {
         DetailView(entryTest: .constant(.default))
     }
 }*/
+
 }
