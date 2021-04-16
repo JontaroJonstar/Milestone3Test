@@ -46,10 +46,10 @@ struct MasterView: View {
                             VStack(alignment: .leading){
                                 
                                 
-                                Text("\(editMode?.wrappedValue.isEditing ?? false ? "Edit " : "")\(entry.title)")
+                                Text(entry.title)
                                     .padding(.horizontal, 10)
                                     .padding(.vertical, 10)
-                                    .frame(width: 215, alignment: .topLeading)
+//                                    .frame(width: 215, alignment: .topLeading)
                                     //.background(Color.blue)
                                     //.foregroundColor(.white)
                                     //.font(.title2)
@@ -61,7 +61,7 @@ struct MasterView: View {
                                     .multilineTextAlignment(.leading)
                                     .padding(.horizontal, 10)
                                     .padding(.vertical, 10)
-                                    .frame(width: 215, alignment: .topLeading)
+//                                    .frame(width: 215, alignment: .topLeading)
                                     //.background(Color.blue)
                                     //.foregroundColor(.white)
                                     .font(.footnote)

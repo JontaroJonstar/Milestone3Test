@@ -31,43 +31,62 @@ struct EditTextView: View {
             VStack{
                 Form {
                     Section{
+                        VStack{Text("Title")
+                            .font(.footnote)
                         TextEditor(text: $entry.title)
-                            .frame(width: 300, height: 200)
-                                            .border(Color.black, width: 1)
-                        
+                            .border(Color.black, width: 1)}
+                        VStack{Text("Description")
+                            .font(.footnote)
                         TextEditor(text: $entry.description)
-                        TextEditor(text: $entry.story)
+                            .border(Color.black, width: 1)}
+                        VStack{Text("Story")
+                            .font(.footnote)
+                            TextEditor(text: $entry.story)
+                                .border(Color.black, width: 1)}
+                        VStack{Text("Recipe")
+                            .font(.footnote)
                         TextEditor(text: $entry.recipe)
+                            .border(Color.black, width: 1)}
+                        VStack{Text("Ingredients")
+                            .font(.footnote)
                         TextEditor(text: $entry.ingredients)
+                            .border(Color.black, width: 1)}
+                        VStack{Text("ImageURL")
+                            .font(.footnote)
                         TextEditor(text: $entry.image)
+                            .border(Color.black, width: 1)}
                     }
                 }
+            
+    
+            
                 
-                Divider()
-                
-                Button(action: {
-                    
-                    
-                    
-                }, label: {
-                    Text("Save Changes")
-                        .frame(width: 250, height: 50, alignment: .center)
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(8)
-                })
-                .padding()
-            }
-            .navigationTitle("Edit Entry")
-        }
-    private func save(){
-        
-        entry.title = entry.title
-//        entry.description = description
-//        entry.story = story
-//        entry.recipe = recipe
-//        entry.ingredients = ingredients
-//        entry.image = image
-    }
+//                Divider()
+//
+//                Button(action: {
+//
+//
+//
+//                }, label: {
+//                    Text("Save Changes")
+//                        .frame(width: 250, height: 50, alignment: .center)
+//                        .background(Color.blue)
+//                        .foregroundColor(.white)
+//                        .cornerRadius(8)
+//                })
+//                .padding()
+      }
+          .navigationTitle("Edit Entry")
+      }
+//    private func save(){
+//
+//        entry.title = entry.title
+////        entry.description = description
+////        entry.story = story
+////        entry.recipe = recipe
+////        entry.ingredients = ingredients
+////        entry.image = image
+//    }
 }
+
 
