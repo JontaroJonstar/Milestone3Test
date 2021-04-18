@@ -13,7 +13,7 @@ class ViewModel: ObservableObject {
     
     func addElement() {
         let entryNumber = model.count + 1
-        let entry = Entry(title: "Title", description: "\(entryNumber)", story: "", image: "", recipe: "", ingredients: "", idNumber: "" )
+        let entry = Entry(title: "Title", description: "\(entryNumber)", story: "Enter story", image: "Enter Image URL", recipe: "Enter Recipe", ingredients: "Enter Ingredients", idNumber: "" )
         model.append(entry)
     }
     

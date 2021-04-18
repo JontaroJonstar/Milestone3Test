@@ -55,12 +55,12 @@ struct DetailView: View {
                         VStack{  //Vertical Ordering and elements
                             
                             //Food Image
-                            Image(uiImage: entry.image.load())
+                            Image(uiImage: "\(entry.image)".load())
                                 .resizable()
                                 .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
                                 .frame(width: 400, height: 300, alignment: .topLeading)
                                 .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
-                                //.scaledToFit()
+                                .scaledToFit()
                                 .padding()
                             
                             ScrollView {
@@ -143,10 +143,10 @@ struct DetailView: View {
                         
                         VStack{ //Vertical Ordering and elements
                             //Food Image
-                            Image("\(entry.image)")
+                            Image(uiImage: "\(entry.image)".load())
                                 .resizable()
                                 .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
-                                .frame(width: 250.0)
+                                .frame(width: 250.0, height: 200)
                                 .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                                 .scaledToFit()
                             

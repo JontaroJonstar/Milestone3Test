@@ -35,6 +35,7 @@ struct EditTextView: View {
                             .font(.footnote)
                         TextEditor(text: $entry.title)
                             .border(Color.black, width: 1)}
+                            
                         VStack{Text("Description")
                             .font(.footnote)
                         TextEditor(text: $entry.description)
