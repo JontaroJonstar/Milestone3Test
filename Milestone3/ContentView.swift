@@ -11,9 +11,10 @@ import SwiftUI
 extension String {
     func load() -> UIImage {
         do {
+            // convert string to URL
             guard let url = URL(string: self)
                 else{
-                
+            //return empty image if URL is invalid
                 return UIImage()
                 
             }
@@ -64,7 +65,6 @@ struct MasterView: View {
                             Image(uiImage: entry.image.load())
                                 .resizable()
                                 .frame (width:75, height:50)
-                                //.clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                                 .scaledToFit()
                             VStack(alignment: .leading){
                                 
@@ -72,21 +72,13 @@ struct MasterView: View {
                                 Text(entry.title)
                                     .padding(.horizontal, 10)
                                     .padding(.vertical, 10)
-//                                    .frame(width: 215, alignment: .topLeading)
-                                    //.background(Color.blue)
-                                    //.foregroundColor(.white)
-                                    //.font(.title2)
-                                    //.lineSpacing(0.5)
                                     .font(.system(size: 20))
-                                    //.multilineTextAlignment(.leading)
+                                    
                                 
                                 Text(entry.description)
                                     .multilineTextAlignment(.leading)
                                     .padding(.horizontal, 10)
                                     .padding(.vertical, 10)
-//                                    .frame(width: 215, alignment: .topLeading)
-                                    //.background(Color.blue)
-                                    //.foregroundColor(.white)
                                     .font(.footnote)
                                     .lineSpacing(0.5)
                                 

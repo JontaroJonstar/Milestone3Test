@@ -15,14 +15,9 @@ struct DetailView: View {
     @Environment(\.horizontalSizeClass) var sizeClass
     @Environment(\.editMode) var editMode
     @State private var draftEntry = Entry.default
-    //@Binding var entry: Entry
+    
     @ObservedObject var entry: Entry
     
-    //let entry: Entry
-    
-    //@State var Title: String = "Steak"  //Title string
-    //@State var Description: String = "Medium rare and served with Hot Chips" //Desicription String
-    //@State var Story: String = "Juicy, tender, loaded with flavor, and has a minimum amount of fat. However, there is a special kind of fat that helps meat be juicy and full of flavor. The best food in the world!" //Story String
     
     var body: some View {
 
@@ -31,27 +26,15 @@ struct DetailView: View {
                 Image(uiImage: entry.image.load())
                     .resizable()
                     .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
-                    //.frame(width: 400, height: 300, alignment: .topLeading)
-                    //.clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
-                    //.scaledToFit()
+                 
                     .padding()
                     .opacity(0.3)
                             
                             .ignoresSafeArea()
                         // if statement covering regular size screen formating
-            
-                                            
-                            
-                            
-                            
-                
+
                     if sizeClass == .regular {
-                        
-                       
-                          
-                  
-                                                 
-                        
+
                         VStack{  //Vertical Ordering and elements
                             
                             //Food Image
@@ -230,32 +213,8 @@ struct DetailView: View {
                                                 Text("Edit Entry")})
                         
                         }
-                        
                     }
-               
-                        
-                }
-
-        
+            }
     }
-        
-    /**func delete(at offsets: IndexSet) {
-        Text.remove(atOffsets: offsets)
-    }**/
-    
-    
-//}
-//
-//
-//    
-//
-//
-//}
-/*
-struct DetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        DetailView(entryTest: .constant(.default))
-    }
-}*/
 
 }

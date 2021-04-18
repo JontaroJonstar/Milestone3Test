@@ -16,7 +16,6 @@
 		7F5DD293261E3F18001F558A /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5DD292261E3F18001F558A /* Entry.swift */; };
 		7F5DD298261E3F4D001F558A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5DD297261E3F4D001F558A /* ViewModel.swift */; };
 		7F683A822627C459006E20B6 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F683A812627C459006E20B6 /* DetailView.swift */; };
-		7F683A8A2627D368006E20B6 /* EntryEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F683A892627D368006E20B6 /* EntryEditor.swift */; };
 		7F683A8F2627ED09006E20B6 /* EditTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F683A8E2627ED09006E20B6 /* EditTextView.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,7 +52,6 @@
 		7F5DD292261E3F18001F558A /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 		7F5DD297261E3F4D001F558A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		7F683A812627C459006E20B6 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
-		7F683A892627D368006E20B6 /* EntryEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryEditor.swift; sourceTree = "<group>"; };
 		7F683A8E2627ED09006E20B6 /* EditTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,7 +109,6 @@
 				7F5DD261261E3EB5001F558A /* ContentView.swift */,
 				7F683A812627C459006E20B6 /* DetailView.swift */,
 				7F683A8E2627ED09006E20B6 /* EditTextView.swift */,
-				7F683A892627D368006E20B6 /* EntryEditor.swift */,
 				7F5DD263261E3EB6001F558A /* Assets.xcassets */,
 				7F5DD268261E3EB6001F558A /* Info.plist */,
 				7F5DD265261E3EB6001F558A /* Preview Content */,
@@ -275,7 +272,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F5DD298261E3F4D001F558A /* ViewModel.swift in Sources */,
-				7F683A8A2627D368006E20B6 /* EntryEditor.swift in Sources */,
 				7F5DD293261E3F18001F558A /* Entry.swift in Sources */,
 				7F5DD262261E3EB5001F558A /* ContentView.swift in Sources */,
 				7F683A822627C459006E20B6 /* DetailView.swift in Sources */,

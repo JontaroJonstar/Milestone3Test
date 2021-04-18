@@ -15,13 +15,8 @@ import SwiftUI
 
 struct EditTextView: View {
     
-//    @ObservedObject var description: String  = ""
-//    @ObservedObject private var story: String = ""
-//    @ObservedObject private var recipe: String = ""
-//    @ObservedObject private var ingredients: String = ""
-//    @ObservedObject private var image: String = ""
     @ObservedObject var entry: Entry
-    //@State var entry: Entry
+
     
     
     
@@ -58,36 +53,11 @@ struct EditTextView: View {
                             .border(Color.black, width: 1)}
                     }
                 }
-            
-    
-            
+
                 
-//                Divider()
-//
-//                Button(action: {
-//
-//
-//
-//                }, label: {
-//                    Text("Save Changes")
-//                        .frame(width: 250, height: 50, alignment: .center)
-//                        .background(Color.blue)
-//                        .foregroundColor(.white)
-//                        .cornerRadius(8)
-//                })
-//                .padding()
       }
           .navigationTitle("Edit Entry")
       }
-//    private func save(){
-//
-//        entry.title = entry.title
-////        entry.description = description
-////        entry.story = story
-////        entry.recipe = recipe
-////        entry.ingredients = ingredients
-////        entry.image = image
-//    }
 }
 
 
