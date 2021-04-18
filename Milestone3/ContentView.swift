@@ -8,6 +8,29 @@
 import Foundation
 import SwiftUI
 
+extension String {
+    func load() -> UIImage {
+        do {
+            guard let url = URL(string: self)
+                else{
+                
+                return UIImage()
+                
+            }
+            let data: Data = try
+                Data(contentsOf: url)
+            
+            return UIImage(data: data)
+                ?? UIImage()
+            
+        } catch {
+            
+        }
+        
+        return UIImage()
+    }
+}
+
 struct ContentView: View {
     // instating all Entries from ListView
     @ObservedObject  var entries: ViewModel
@@ -38,7 +61,7 @@ struct MasterView: View {
                     NavigationLink(
                         destination: DetailView(entry: entry), label: {
                         HStack{
-                            Image(entry.image)
+                            Image(uiImage: entry.image.load())
                                 .resizable()
                                 .frame (width:75, height:50)
                                 //.clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)

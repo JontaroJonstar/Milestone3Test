@@ -33,7 +33,7 @@ class Entry: Identifiable, ObservableObject {
 let entry1 = Entry(title: "Steak",
                    description: "Medium rare and served with Hot Chips",
                    story: "Juicy, tender, loaded with flavor, and has a minimum amount of fat. However, there is a special kind of fat that helps meat be juicy and full of flavor. The best food in the world!",
-                   image: "food",
+                   image: "https://hips.hearstapps.com/del.h-cdn.co/assets/18/08/1519155106-flank-steak-horizontal.jpg",
                    recipe:  """
                             1. Bring to room temp! This makes an amazing difference to cooking through evenly rather than ending up with a thick overcooked band in order for the very centre to be cooked to your liking.
                             2. Pat dry and season the steak generously with salt and pepper – this helps form that amazing crust we all know and love about great steaks.
@@ -50,7 +50,7 @@ let entry1 = Entry(title: "Steak",
 let entry2 = Entry(title: "Strawberry cake",
                    description: "It's a Lie!",
                    story: "No-one has to refuse a piece of this heavenly strawberry cake – it's gluten- and dairy-free.",
-                   image: "cake",
+                   image: "https://tmbidigitalassetsazure.blob.core.windows.net/rms3-prod/attachments/37/1200x1200/Strawberry-Jam-Cake_EXPS_FT21_92780_F_0218_1.jpg",
                    recipe:      """
                                 Step 1
                                 Preheat oven to 180C/160C fan-forced. Grease 2 x 6cm-deep, 20cm round cake pans. Line bases and sides with 2 layers of baking paper.
@@ -89,7 +89,7 @@ let entry2 = Entry(title: "Strawberry cake",
 let entry3 = Entry(title: "Tomato and Spinach Pasta",
                    description: "Flavorful and delicious!",
                    story: "Easier than a box meal, this creamy tomato and spinach pasta is also more flavorful and delicious. 100% real ingredients. Perfect for busy weeknights! ",
-                   image: "pasta",
+                   image: "https://www.budgetbytes.com/wp-content/uploads/2013/07/Creamy-Spinach-Tomato-Pasta-bowl.jpg",
                    recipe:  """
                             1. Bring a large pot of water to a boil over high heat. Add the pasta and continue to boil until tender (7-10 minutes). Drain the pasta in a colander.
                             2. While the pasta is cooking, prepare the creamy tomato sauce. Dice the onion and mince the garlic. Add the onion, garlic, and olive oil to a large skillet and sauté over medium heat until the onions are soft and translucent (3-5 minutes).
@@ -118,7 +118,7 @@ let entry3 = Entry(title: "Tomato and Spinach Pasta",
 let entry4 = Entry(title: "Pepperoni Pizza",
                    description: "Tons of pepperoni, a nice crust, great flavor.",
                    story: "This Homemade Pepperoni Pizza has everything you want—a great crust, gooey cheese, and tons of pepperoni. The secret to great pepperoni flavor? Hide extra under the cheese! Who needs delivery?",
-                   image: "pizza",
+                   image: "https://media.istockphoto.com/photos/tasty-pepperoni-pizza-and-cooking-ingredients-tomatoes-basil-on-black-picture-id1083487948?k=6&m=1083487948&s=612x612&w=0&h=lK-mtDHXA4aQecZlU-KJuAlN9Yjgn3vmV2zz5MMN7e4=",
                    recipe:      """
                                 1. Preheat the oven:
                                 Preheat oven to 500°F. If you are using a pizza stone, preheat it in the oven for at least 20 minutes so it is nice and hot as well.
@@ -169,7 +169,7 @@ let entry4 = Entry(title: "Pepperoni Pizza",
 let entry5 = Entry(title: "Butter Chicken Curry",
                    description: "Mild yet full of flavor!",
                    story: "This is the perfect weeknight curry — it's primarily comprised of ingredients you probably already have on hand: chicken, onions, garlic, pantry spices, heavy cream, and canned tomatoes. Not a spice lover? All good; while there are a lot of warm ground spices that season the dish, this curry isn't spicy at all. ",
-                   image: "curry",
+                   image: "https://gimmedelicious.com/wp-content/uploads/2020/01/30-Minute-Instant-Pot-Butter-Chicken-7.jpg",
                    recipe:      """
                                 1. In a large pot over medium-high heat, heat oil. Add onion and cook until soft, 5 minutes. Add chicken and sear until no pink remains, 5 minutes. Stir in garlic and ginger and cook until fragrant, 1 minute.
                                 2. Add spices and cook until very fragrant, 1 minute. Add tomatoes and broth and bring to a simmer. Stir in heavy cream, and season with salt and pepper. Simmer until chicken pieces are cooked through and tender, about 15 to 20 minutes.
